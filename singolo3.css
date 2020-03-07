@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 940px;
+}
+
+/* _________________________________________________GET-A-QUOTE______________________________________________________ */
+
+.get-a-quote {
+    height: 648px;
+    background: #FF6C64;
+}
+
+.get-a-quote__title,
+.get-a-quote__text {
+    color: #F9D9DA;
+}
+
+.get-a-quote__title {
+    padding-top: 60px;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -0.1px;
+}
+
+.get-a-quote__text {
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: justify;
+    letter-spacing: -0.2px;
+    line-height: 29px;
+}
+
+.get-a-quote__form-contacts,
+.get-a-quote__form label {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.get-a-quote__form {
+    width: 619px;
+}
+
+.get-a-quote__form label {
+    margin-top: 16px;
+}
+
+.get-a-quote__form label input,
+.get-a-quote__form label textarea {
+    outline-color: #F9D9DA;
+}
+
+
+.get-a-quote__form label:first-child {
+    margin-top: 0;
+}
+
+.get-a-quote__form label input,
+.get-a-quote__form label textarea {
+    background: #F5554E;
+    color: #FF8D90;
+    line-height: 38px;
+    font-size: 12px;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+
+.get-a-quote__form label textarea {
+    width: 589px;
+    height: 202px;
+    resize: none;
+    font-family: "Lato", sans-serif;
+}
+
+.get-a-quote__form label input::-moz-placeholder,
+.get-a-quote__form label textarea::-moz-placeholder {
+    color: #FF8D90;
+}
+
+.get-a-quote__form label input::-webkit-input-placeholder,
+.get-a-quote__form label textarea::-webkit-input-placeholder {
+    color: #FF8D90;
+}
+
+.get-a-quote__form-contacts {
+    margin-top: 43px;
+    gap: 22px;
+}
+
+.get-a-quote__contacts {
+    color: #F9D9DA;
+}
+
+.get-a-quote__contacts-title {
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: -2px;
+    letter-spacing: -0.2px;
+}
+
+.get-a-quote__contacts-text {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: justify;
+    margin-top: 10px;
+    line-height: 21px;
+}
+
+.get-a-quote__contacts-contacts {
+    margin-top: 23px;
+}
+
+.get-a-quote__contacts-contacts a {
+    color: #F9D9DA;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.1px;
+    position: relative;
+    margin-left: 22px;
+}
+
+.get-a-quote__contacts-contacts a:hover {
+    text-decoration: underline;
+}
+
+.location-icon::before {
+    font-family: "icomoon";
+    content: "\e947";
+}
+
+.tel-icon::before {
+    font-family: "icomoon";
+    content: "\e942";
+}
+
+.mail-icon::before {
+    font-family: "icomoon";
+    content: "\e90d";
+    top: -4px;
+    font-size: 14px;
+}
+
+.location-icon::before,
+.tel-icon::before,
+.mail-icon::before {
+    position: absolute;
+    display: inline-block;
+    transform: scale(-1, 1);
+    padding-left: 10px;
+    left: -23px;
+}
+
+.get-a-quote__contacts-contacts a:last-child {
+    line-height: 23px;
+    letter-spacing: 0;
+}
+
+.get-a-quote__bottom {
+    background: #FF676C;
+    height: 6px;
+}
+
+.get-a-quote__form-button {
+    text-align: right;
+}
+
+.get-a-quote__form-button button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 700;
+    background: #F9D9DA;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #000000;
+}
+
+/* __________________________________________________FOOTER_____________________________________________________ */
+
+.footer {
+    height: 76px;
+    background: #272C38;
+}
+
+.footer__items {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22px;
+}
+
+.footer__copyright p {
+    font-size: 12px;
+    color: #636D8B;
+    padding-top: 9px;
+}
+
+.footer__icons a {
+    padding-right: 4px;
+}
+
+.footer__icons a:last-child {
+    padding-right: 0;
+}
