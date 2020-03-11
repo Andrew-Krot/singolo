@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <a name="home"></a>
     <header class="header">
         <div class="container">
             <div class="header__items">
@@ -17,12 +18,12 @@
                     <h1 class="logo">singolo<span class="logo__last-letter">*</span></h1>
                 </div>
                 <nav class="nav">
-                    <ul>
-                        <li>home</li>
-                        <li>services</li>
-                        <li>portfolio</li>
-                        <li>about</li>
-                        <li>contact</li>
+                    <ul id="menu">
+                        <li><a href="#home" class="active">home</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#portfolio">portfolio</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#contacts">contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -46,6 +47,7 @@
     <div class="slider__bottom"></div>
 
     <div class="services">
+        <a name="services"></a>
         <div class="container">
             <div class="services__title">
                 <p>Our Services</p>
@@ -142,6 +144,7 @@
     <div class="services__bottom"></div>
 
     <div class="portfolio">
+        <a name="portfolio"></a>
         <div class="container">
             <div class="portfolio__title">
                 <p>Portfolio</p>
@@ -176,6 +179,7 @@
     <div class="portfolio__bottom"></div>
 
     <div class="about-us">
+        <a name="about"></a>
         <div class="container">
             <div class="about-us__title">
                 <p>About Us</p>
@@ -252,6 +256,7 @@
     <div class="about-us__bottom"></div>
 
     <div class="get-a-quote">
+        <a name="contacts"></a>
         <div class="container">
             <div class="get-a-quote__title">
                 <p>Get a Quote</p>
@@ -318,6 +323,9 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
