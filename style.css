@@ -18,23 +18,20 @@ body {
     max-width: 940px;
 }
 
+/* ___________________________________________________HEADER_________________________________________________________ */
+
 .header {
     position: sticky;
     top: -2em;
     width: 100%;
-    z-index: 1;
-}
-
-/* ___________________________________________________HEADER_________________________________________________________ */
-
-.header {
-    background: #272C38;
+    z-index: 999;
+    background: #2D2F3B;
     height: 89px;
 }
 
 .header__bottom {
     height: 6px;
-    background: #2C3445;
+    background: #333645;
 }
 
 .logo {
@@ -114,13 +111,13 @@ body {
 /* ___________________________________________________SLIDER_________________________________________________________ */
 
 .slider {
-    background: #FF6C64;
+    background: #F16C65;
     height: 594px;
 }
 
 .slider__bottom {
     height: 6px;
-    background: #FF676C;
+    background: #EA676C;
 }
 
 .slider__items {
@@ -168,14 +165,46 @@ body {
 }
 
 .slider__item-vertical-phone {
+    position: relative;
     padding-top: 53px;
     margin-left: 5.5px;
 }
 
+.slider__item-vertical-phone-btn {
+    position: absolute;
+    top: 460px;
+    left: 86px;
+    cursor: pointer;
+}
+
+.slider__item-vertical-phone-display {
+    position: absolute;
+    left: 14px;
+    top: 118px;
+}
+
 .slider__item-horizontal-phone {
+    position: relative;
     padding-top: 174px;
     margin-left: 32px;
-    margin-right: 5.5px;
+    margin-right: 6px;
+}
+
+.slider__item-horizontal-phone-btn {
+    position: absolute;
+    left: 8px;
+    top: 260px;
+    cursor: pointer;
+}
+
+.slider__item-horizontal-phone-display {
+    position: absolute;
+    left: 60px;
+    top: 188px;
+}
+
+.slider__item-horizontal-phone-display-hidden {
+    display: none;
 }
 
 /* ___________________________________________________SERVICES________________________________________________________ */
@@ -306,14 +335,14 @@ body {
 }
 
 .services__bottom {
-    height: 5px;
+    height: 6px;
 }
 
 /* _________________________________________________________PORTFOLIO_____________________________________________ */
 
 .portfolio {
-    height: 864px;
-    background: #272C38;
+    height: 863px;
+    background: #2D2F3B;
 }
 
 .portfolio__title,
@@ -474,7 +503,7 @@ body {
 
 .get-a-quote {
     height: 648px;
-    background: #FF6C64;
+    background: #F16C65;
 }
 
 .get-a-quote__title,
@@ -524,7 +553,7 @@ body {
 
 .get-a-quote__form label input,
 .get-a-quote__form label textarea {
-    background: #F5554E;
+    background: #D75650;
     color: #FF8D90;
     line-height: 38px;
     font-size: 12px;
