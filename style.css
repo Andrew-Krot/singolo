@@ -371,12 +371,14 @@ body {
 }
 
 .portfolio__item {
-    border: 3px solid transparent;
+    border: 5px solid transparent;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 .portfolio__item-active {
-    border: 3px solid #ffffff;
+    border: 5px solid #F06C64;
+    transition: all 0.3s;
 }
 
 .portfolio__nav ul li {
