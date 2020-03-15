@@ -120,7 +120,7 @@ body {
 
 .slide-2__bg {
     background: #648BF0;
-    transition: all ease 1s;
+    transition: all ease 0.3s;
 }
 
 .slider__bottom {
