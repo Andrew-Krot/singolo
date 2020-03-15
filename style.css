@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    outline: none;
 }
 
 html {
@@ -113,6 +114,13 @@ body {
 .slider {
     background: #F16C65;
     height: 594px;
+    position: relative;
+    transition: all ease 0.3s;
+}
+
+.slide-2__bg {
+    background: #648BF0;
+    transition: all ease 1s;
 }
 
 .slider__bottom {
@@ -140,28 +148,13 @@ body {
     transition: all 0.3s;
 }
 
-.left-arrow {
+#slider-left-arrow {
     transform: scale(-1, 1);
     margin-left: -5px;
 }
 
 .right-arrow {
     margin-right: -7px;
-}
-
-.slider__items::before,
-.slider__items::after {
-    color: #E94348;
-    font-size: 30px;
-    font-weight: 700;
-    margin-top: 279px;
-    margin-bottom: 315px;
-    cursor: pointer;
-}
-
-.slider__items:hover::before,
-.slider__items:hover::after {
-    color: #f2f2f2;
 }
 
 .slider__item-vertical-phone {
@@ -203,7 +196,18 @@ body {
     top: 188px;
 }
 
-.slider__item-horizontal-phone-display-hidden {
+.slider__item-phone-display-hidden {
+    display: none;
+}
+
+#slide-2 {
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    margin-left: -258px;
+}
+
+.slider-none {
     display: none;
 }
 
@@ -246,12 +250,6 @@ body {
 
 .services__item {
     max-width: 300px;
-}
-
-.services__item:hover {
-    text-decoration: underline;
-    text-decoration-color: #636D8B;
-    cursor: pointer;
 }
 
 .services__item-title p {
@@ -442,12 +440,6 @@ body {
 
 .about-us__items .about-us__item:nth-child(n+4) {
     display: none;
-}
-
-.about-us__item-title:hover,
-.about-us__item-text:hover {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 .about-us__item {
