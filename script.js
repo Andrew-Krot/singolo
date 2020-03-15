@@ -1,14 +1,38 @@
-//  Active-menu 
+window.onload = function () {
+    // MENU
+    addMenuClickHandler();
 
-const MENU = document.getElementById('menu');
+    // PORTFOLIO-TAGS
+    addTagsClickHandler();
 
+    // PORTFOLIO-ITEMS
+    addImageClickHandler();
+}
 
-MENU.addEventListener('click', (event) => {
-    MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
-    event.target.classList.add('active');
-})
+//  HEADER-MENU
 
-//  Phone Click
+const addMenuClickHandler = () => {
+    document.querySelector('.menu').addEventListener('click', (e) => {
+        if (e.target.classList.contains('item')) {
+            let clickedItem = e.target;
+            removeSelectedItems();
+            selectClickedItem(clickedItem);
+        }
+    })
+}
+
+const removeSelectedItems = () => {
+    let items = document.querySelectorAll('.menu .item');
+    items.forEach(item => {
+        item.classList.remove('active');
+    })
+}
+
+const selectClickedItem = (clickedItem) => {
+    clickedItem.classList.add('active');
+}
+
+//  PHONE-CLICK
 
 const verticalBtn = document.getElementById('vertical-phone-btn');
 const verticalDisplay = document.getElementById('vertical-phone-display');
@@ -39,6 +63,7 @@ horizontalBtn.onclick = function () {
 }
 
 //  SLIDER 
+
 const slider = document.getElementById('slider')
 const slide_1 = document.getElementById('slide-1');
 const slide_2 = document.getElementById('slide-2')
@@ -76,4 +101,50 @@ rightArrow.onclick = function () {
         slide_2.classList.remove('slider-none');
         slider.classList.add('slide-2__bg');
     }
+}
+
+// PORTFOLIO-TAGS
+
+const addTagsClickHandler = () => {
+    document.querySelector('.portfolio__tags').addEventListener('click', (e) => {
+        if (e.target.classList.contains('tag')) {
+            let clickedTag = e.target;
+            removeSelectedTag();
+            selectClickedTag(clickedTag);
+        }
+    })
+}
+
+const removeSelectedTag = () => {
+    let tags = document.querySelectorAll('.portfolio__tags .tag');
+    tags.forEach(tag => {
+        tag.classList.remove('tag_selected');
+    })
+}
+
+const selectClickedTag = (clickedTag) => {
+    clickedTag.classList.add('tag_selected');
+}
+
+// PORTFOLIO-IMAGES-active
+
+const addImageClickHandler = () => {
+    document.querySelector('.portfolio__items').addEventListener('click', (e) => {
+        if (e.target.classList.contains('portfolio__item')) {
+            let clickedImg = e.target;
+            removeSelectedImg();
+            selectClickedImg(clickedImg);
+        }
+    })
+}
+
+const removeSelectedImg = () => {
+    let imgs = document.querySelectorAll('.portfolio__items .portfolio__item');
+    imgs.forEach(img => {
+        img.classList.remove('portfolio__item-active');
+    })
+}
+
+const selectClickedImg = (clickedImg) => {
+    clickedImg.classList.add('portfolio__item-active');
 }

@@ -370,6 +370,15 @@ body {
     padding-top: 15px;
 }
 
+.portfolio__item {
+    border: 3px solid transparent;
+    cursor: pointer;
+}
+
+.portfolio__item-active {
+    border: 3px solid #ffffff;
+}
+
 .portfolio__nav ul li {
     display: inline-block;
     font-size: 12px;
@@ -410,6 +419,10 @@ body {
 .portfolio__bottom {
     height: 6px;
     background: #2C3445;
+}
+
+.tag_selected {
+    color: #C6C6C6;
 }
 
 /* ___________________________________________________ABOUT-US______________________________________________________ */
