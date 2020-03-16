@@ -64,9 +64,10 @@ horizontalBtn.onclick = function () {
 
 //  SLIDER 
 
-const slider = document.getElementById('slider')
+const slider = document.getElementById('slider');
+const slider_bottom = document.getElementById('slider__bottom');
 const slide_1 = document.getElementById('slide-1');
-const slide_2 = document.getElementById('slide-2')
+const slide_2 = document.getElementById('slide-2');
 
 const leftArrow = document.getElementById('slider-left-arrow');
 const rightArrow = document.getElementById('slider-right-arrow');
@@ -80,11 +81,13 @@ leftArrow.onclick = function () {
         slide_1.querySelector('.slider__item-horizontal-phone').classList.remove('slider-none');
         slide_2.classList.add('slider-none');
         slider.classList.remove('slide-2__bg');
+        slider_bottom.classList.remove('slider__bottom-slide-2');
     } else {
         slide_1.querySelector('.slider__item-vertical-phone').classList.add('slider-none');
         slide_1.querySelector('.slider__item-horizontal-phone').classList.add('slider-none');
         slide_2.classList.remove('slider-none');
         slider.classList.add('slide-2__bg');
+        slider_bottom.classList.add('slider__bottom-slide-2');
     }
 }
 
@@ -95,11 +98,13 @@ rightArrow.onclick = function () {
         slide_1.querySelector('.slider__item-horizontal-phone').classList.remove('slider-none');
         slide_2.classList.add('slider-none');
         slider.classList.remove('slide-2__bg');
+        slider_bottom.classList.remove('slider__bottom-slide-2');
     } else {
         slide_1.querySelector('.slider__item-vertical-phone').classList.add('slider-none');
         slide_1.querySelector('.slider__item-horizontal-phone').classList.add('slider-none');
         slide_2.classList.remove('slider-none');
         slider.classList.add('slide-2__bg');
+        slider_bottom.classList.add('slider__bottom-slide-2');
     }
 }
 
@@ -111,6 +116,8 @@ const addTagsClickHandler = () => {
             let clickedTag = e.target;
             removeSelectedTag();
             selectClickedTag(clickedTag);
+            removeSelectedImg();
+            shuffleImgs();
         }
     })
 }
@@ -124,6 +131,12 @@ const removeSelectedTag = () => {
 
 const selectClickedTag = (clickedTag) => {
     clickedTag.classList.add('tag_selected');
+}
+
+const shuffleImgs = () => {
+    let first = document.querySelector('.portfolio__items').firstElementChild;
+    let last = document.querySelector('.portfolio__items').lastElementChild;
+    first.before(last);
 }
 
 // PORTFOLIO-IMAGES-active
