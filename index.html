@@ -291,21 +291,22 @@
                     tortor mauris condimentum nibh.</p>
             </div>
             <div class="get-a-quote__form-contacts">
-                <form class="get-a-quote__form">
+                <form id="form" class="get-a-quote__form">
                     <label>
-                        <input type="text" name="name" placeholder="Name" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" required>
+                        <input id="name" type="text" name="name" placeholder="Name" pattern="^[a-zA-ZА-Яа-яЁё\s]+$"
+                            required>
                     </label>
                     <label>
-                        <input type="email" name="Email" placeholder="Email" required>
+                        <input id="email" type="email" name="Email" placeholder="Email" required>
                     </label>
                     <label>
-                        <input type="text" placeholder="Subject">
+                        <input id="subject" type="text" placeholder="Subject">
                     </label>
                     <label>
-                        <textarea placeholder="Describe your project in detail..."></textarea>
+                        <textarea id="describe" placeholder="Describe your project in detail..."></textarea>
                     </label>
                     <div class="get-a-quote__form-button">
-                        <button type="submit">Submit</button>
+                        <button id="btn" type="submit">Submit</button>
                     </div>
                 </form>
                 <div class="get-a-quote__contacts">
@@ -331,6 +332,19 @@
         </div>
     </section>
     <div class="get-a-quote__bottom"></div>
+
+
+    <div id="message-block" class="hidden">
+        <div id="message">
+            <h3 id="message-status"></h3>
+            <br>
+            <p>Тема: <span id="subject-result"></span></p>
+            <br>
+            <p>Описание: <span id="describe-result"></span></p>
+            <button id="close-btn">OK</button>
+        </div>
+    </div>
+
 
     <footer class="footer">
         <div class="container">

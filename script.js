@@ -161,3 +161,32 @@ const removeSelectedImg = () => {
 const selectClickedImg = (clickedImg) => {
     clickedImg.classList.add('portfolio__item-active');
 }
+
+// MODAL-WINDOW
+
+const button = document.getElementById('btn');
+const close_button = document.getElementById('close-btn');
+
+button.addEventListener('click', () => {
+    const subject = document.getElementById('subject').value.toString();
+    const describe = document.getElementById('describe').value.toString();
+    const name = document.getElementById('name').value.toString();
+    const email = document.getElementById('email').value.toString();
+    document.getElementById('message-block').classList.remove('hidden');
+
+    (name.length == 0 || email.length == 0) ? document.getElementById('message-status').innerText = 'Письмо не отправлено, необходимо заполнить обязательные поля (Name, Email)': document.getElementById('message-status').innerText = 'Письмо отправлено';
+
+    subject.length == 0 ? document.getElementById('subject-result').innerText = 'Без темы' :
+        document.getElementById('subject-result').innerText = subject;
+
+    describe.length == 0 ? document.getElementById('describe-result').innerText = 'Без описания' :
+        document.getElementById('describe-result').innerText = describe;
+})
+
+close_button.addEventListener('click', () => {
+    document.getElementById('subject-result').innerText = '';
+    document.getElementById('describe-result').innerText = '';
+    document.getElementById('message-block').classList.add('hidden');
+    document.getElementById('form').reset()
+
+})
