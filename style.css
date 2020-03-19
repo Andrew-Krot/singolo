@@ -19,12 +19,16 @@ body {
     max-width: 940px;
 }
 
+section {
+    scroll-margin-top: 95px;
+}
+
 /* ___________________________________________________HEADER_________________________________________________________ */
 
 .header {
 
     position: sticky;
-    top: -2em;
+    top: 0;
     width: 100%;
     z-index: 999;
     background: #2D2F3B;
@@ -32,6 +36,10 @@ body {
 }
 
 .header__bottom {
+    position: sticky;
+    top: 89px;
+    width: 100%;
+    z-index: 999;
     height: 6px;
     background: #333645;
 }
@@ -75,7 +83,7 @@ body {
 
 .nav ul li a:hover {
     color: #FF6C64;
-    transition: all 0.3s;
+    transition: all 0.1s;
 }
 
 .nav ul li a.active {

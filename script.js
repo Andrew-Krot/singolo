@@ -32,6 +32,25 @@ const selectClickedItem = (clickedItem) => {
     clickedItem.classList.add('active');
 }
 
+const onScroll = (event) => {
+    const curPos = window.scrollY + 95;
+    const sections = document.querySelectorAll('section');
+    const links = document.querySelectorAll('.menu > li > a');
+
+    sections.forEach((el) => {
+        if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+            links.forEach((a) => {
+                a.classList.remove('active');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active');
+                }
+            })
+        }
+    })
+}
+
+document.addEventListener('scroll', onScroll);
+
 //  PHONE-CLICK
 
 const verticalBtn = document.getElementById('vertical-phone-btn');
