@@ -9,7 +9,7 @@ window.onload = function () {
     addImageClickHandler();
 }
 
-//  HEADER-MENU
+//  ACTIVE-MENU onClick
 
 const addMenuClickHandler = () => {
     document.querySelector('.menu').addEventListener('click', (e) => {
@@ -31,6 +31,8 @@ const removeSelectedItems = () => {
 const selectClickedItem = (clickedItem) => {
     clickedItem.classList.add('active');
 }
+
+// ACTIVE-MENU onScroll
 
 const onScroll = (event) => {
     const curPos = window.scrollY + 95;
@@ -149,10 +151,6 @@ const removeSelectedTag = () => {
 }
 
 const selectClickedTag = (clickedTag) => {
-    clickedTag.classList.add('tag_selected');
-}
-
-const shuffleImgs = () => {
     let first = document.querySelector('.portfolio__items').firstElementChild;
     let last = document.querySelector('.portfolio__items').lastElementChild;
     first.before(last);
@@ -191,9 +189,10 @@ button.addEventListener('click', () => {
     const describe = document.getElementById('describe').value.toString();
     const name = document.getElementById('name').value.toString();
     const email = document.getElementById('email').value.toString();
-    document.getElementById('message-block').classList.remove('hidden');
-
-    (name.length == 0 || email.length == 0) ? document.getElementById('message-status').innerText = 'Письмо не отправлено, необходимо заполнить обязательные поля (Name, Email)': document.getElementById('message-status').innerText = 'Письмо отправлено';
+    if (name.length != 0 && email.length != 0) {
+        document.getElementById('message-block').classList.remove('hidden');
+        document.getElementById('message-status').innerText = 'Письмо отправлено';
+    }
 
     subject.length == 0 ? document.getElementById('subject-result').innerText = 'Без темы' :
         document.getElementById('subject-result').innerText = subject;
