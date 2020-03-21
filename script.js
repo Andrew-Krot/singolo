@@ -151,6 +151,10 @@ const removeSelectedTag = () => {
 }
 
 const selectClickedTag = (clickedTag) => {
+    clickedTag.classList.add('tag_selected');
+}
+
+const shuffleImgs = () => {
     let first = document.querySelector('.portfolio__items').firstElementChild;
     let last = document.querySelector('.portfolio__items').lastElementChild;
     first.before(last);
