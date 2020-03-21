@@ -32,7 +32,7 @@ section {
     width: 100%;
     z-index: 999;
     background: #2D2F3B;
-    height: 89px;
+    min-height: 89px;
 }
 
 .header__bottom {
@@ -121,7 +121,6 @@ section {
 /* ___________________________________________________SLIDER_________________________________________________________ */
 
 .slider {
-
     background: #F16C65;
     height: 594px;
     position: relative;
@@ -147,12 +146,10 @@ section {
 .slider__items {
     display: flex;
     justify-content: space-between;
-    height: 594px;
 }
 
 .icon-arrow_forward_ios {
     margin-top: 279px;
-    margin-bottom: 315px;
     font-size: 30px;
     color: #E94348;
     cursor: pointer;
@@ -526,7 +523,7 @@ section {
 /* _________________________________________________GET-A-QUOTE______________________________________________________ */
 
 .get-a-quote {
-    height: 648px;
+    min-height: 648px;
     background: #F16C65;
 }
 
