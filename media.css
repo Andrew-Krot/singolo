@@ -120,6 +120,18 @@
 
     /* HEADER */
 
+    .header {
+        height: 65px;
+    }
+
+    .header__bottom {
+        top: 65px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
     .header__item-logo {
         position: relative;
     }
@@ -145,7 +157,7 @@
     .header__items {
         display: block;
         text-align: center;
-        padding-top: 30px;
+        padding-top: 24px;
     }
 
     .nav {
