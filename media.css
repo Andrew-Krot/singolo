@@ -177,8 +177,9 @@
     #slide-2 {
         position: relative;
         top: -106px;
-        left: 58px;
+        left: 63px;
         margin-left: 0;
+        max-width: 192px;
     }
 
     #slide-2 img {
