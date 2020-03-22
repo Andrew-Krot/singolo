@@ -140,7 +140,7 @@
         display: block;
         z-index: 2;
         position: absolute;
-        left: -168px;
+        left: -140px;
         font-size: 24px;
         transition: all ease 0.3s;
     }
