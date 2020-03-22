@@ -125,7 +125,7 @@
     }
 
     .header__bottom {
-        top: 65px;
+        display: none;
     }
 
     .logo {
@@ -150,10 +150,6 @@
         transition: all ease 0.3s;
     }
 
-    .header__item-logo a {
-        color: #ffffff;
-    }
-
     .header__items {
         display: block;
         text-align: center;
@@ -161,11 +157,21 @@
     }
 
     .nav {
-        display: none;
+        position: absolute;
+        left: 0px;
+        top: 65px;
+        background: #2D2F3B;
+        width: 278px;
+        height: 100vh;
     }
 
     .nav ul li {
         display: block;
+        padding-top: 30px;
+    }
+
+    .nav ul li a {
+        font-size: 24px;
     }
 
     .nav ul li::before {

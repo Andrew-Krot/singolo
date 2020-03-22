@@ -56,14 +56,17 @@ document.addEventListener('scroll', onScroll);
 // BURGER-MENU 
 
 const burger_menu = document.getElementById('burger');
+const nav = document.getElementById('nav');
 let burger_menuCountClick = 1;
 
 burger_menu.onclick = function () {
     burger_menuCountClick++;
     if (burger_menuCountClick % 2 == 0) {
         burger_menu.classList.add('icon-menu-active');
+        nav.classList.remove('nav-none');
     } else {
         burger_menu.classList.remove('icon-menu-active');
+        nav.classList.add('nav-none');
     }
 }
 
