@@ -56,7 +56,7 @@ document.addEventListener('scroll', onScroll);
 // BURGER-MENU 
 
 const burger_menu = document.getElementById('burger');
-let burger_menuCountClick = 0;
+let burger_menuCountClick = 1;
 
 burger_menu.onclick = function () {
     burger_menuCountClick++;
