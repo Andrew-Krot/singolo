@@ -53,6 +53,20 @@ const onScroll = (event) => {
 
 document.addEventListener('scroll', onScroll);
 
+// BURGER-MENU 
+
+const burger_menu = document.getElementById('burger');
+let burger_menuCountClick = 0;
+
+burger_menu.onclick = function () {
+    burger_menuCountClick++;
+    if (burger_menuCountClick % 2 == 0) {
+        burger_menu.classList.add('icon-menu-active');
+    } else {
+        burger_menu.classList.remove('icon-menu-active');
+    }
+}
+
 //  PHONE-CLICK
 
 const verticalBtn = document.getElementById('vertical-phone-btn');

@@ -118,6 +118,48 @@
         max-width: 315px;
     }
 
+    /* HEADER */
+
+    .header__item-logo {
+        position: relative;
+    }
+
+    .icon-menu {
+        display: block;
+        z-index: 2;
+        position: absolute;
+        left: -168px;
+        font-size: 24px;
+        transition: all ease 0.3s;
+    }
+
+    .icon-menu-active {
+        transform: rotate(90deg);
+        transition: all ease 0.3s;
+    }
+
+    .header__item-logo a {
+        color: #ffffff;
+    }
+
+    .header__items {
+        display: block;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav ul li {
+        display: block;
+    }
+
+    .nav ul li::before {
+        content: '';
+    }
+
     /* SLIDER */
 
     .slider {
