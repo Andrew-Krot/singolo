@@ -53,7 +53,7 @@ const onScroll = (event) => {
 
 document.addEventListener('scroll', onScroll);
 
-// BURGER-MENU 
+// BURGER-MENU
 
 const burger_menu = document.getElementById('burger');
 const nav = document.getElementById('nav');
@@ -63,10 +63,10 @@ burger_menu.onclick = function () {
     burger_menuCountClick++;
     if (burger_menuCountClick % 2 == 0) {
         burger_menu.classList.add('icon-menu-active');
-        nav.classList.remove('nav-none');
+        nav.style.display = "block";
     } else {
         burger_menu.classList.remove('icon-menu-active');
-        nav.classList.add('nav-none');
+        nav.style.display = "none";
     }
 }
 
@@ -100,7 +100,7 @@ horizontalBtn.onclick = function () {
     }
 }
 
-//  SLIDER 
+//  SLIDER
 
 const slider = document.getElementById('slider');
 const slider_bottom = document.getElementById('slider__bottom');
@@ -154,7 +154,6 @@ const addTagsClickHandler = () => {
             let clickedTag = e.target;
             removeSelectedTag();
             selectClickedTag(clickedTag);
-            removeSelectedImg();
             shuffleImgs();
         }
     })
