@@ -118,8 +118,8 @@
     max-width: 315px;
   }
 
-  .section {
-    scroll-margin-top: 80px;
+  section {
+    scroll-margin-top: 65px;
   }
 
   .header__bottom,
